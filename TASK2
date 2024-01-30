@@ -1,0 +1,18 @@
+import random
+
+def guess_number():
+    number = random.randint(1, 100)  # Generate a random number between 1 and 100
+    guessed_number = False
+    
+    while not guessed_number:
+        guess = int(input("Guess a number between 1 and 100: "))
+        
+        if guess < number:
+            print("Too low, try again!")
+        elif guess > number:
+            print("Too high, try again!")
+        else:
+            print("Congratulations, you guessed it!")
+            guessed_number = True
+
+guess_number()
